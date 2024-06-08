@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 
 export const Steps = ({ gettingdata }) => {
-  const [activeState, setActiveState] = useState(false);
+  const [activeState, setActiveState] = useState(null); // Initially set to null
+
   const handleStepClick = (step) => {
     gettingdata(step);
-    setActiveState(true);
+    setActiveState(step);
   };
 
   return (
     <>
       <ul id="uniform-tabs-nav" className="list-unstyled">
-        {/* <li className="active navone"> */}
-        <li className="active navone">
+        <li className={`navone ${activeState === 1 ? "active" : ""}`}>
           <a onClick={() => handleStepClick(1)}>
             <div className="step">
               <div className="step-no">Step 1</div>
@@ -26,8 +26,7 @@ export const Steps = ({ gettingdata }) => {
             </div>
           </a>
         </li>
-        {/* <li className="navtwo"> */}
-        <li className={`${activeState} navtwo`}>
+        <li className={`navtwo ${activeState === 2 ? "active" : ""}`}>
           <a onClick={() => handleStepClick(2)}>
             <div className="step">
               <div className="step-no">Step 2</div>
@@ -45,8 +44,7 @@ export const Steps = ({ gettingdata }) => {
             </div>
           </a>
         </li>
-        {/* <li className="navthree"> */}
-        <li className={`${activeState} navtwo`}>
+        <li className={`navthree ${activeState === 3 ? "active" : ""}`}>
           <a onClick={() => handleStepClick(3)}>
             <div className="step">
               <div className="step-no">Step 3</div>

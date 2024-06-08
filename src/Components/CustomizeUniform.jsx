@@ -6,7 +6,7 @@ export default function CustomizeUniform(zz) {
     <>
       <div id="uniform-tabs-content" className="fosClssss">
         <div id="tab2" className="tab-content" style={{ display: "block" }}>
-          <div
+          {/* <div
             className="beforeLoadTop"
             style={{
               width: "930px",
@@ -23,16 +23,17 @@ export default function CustomizeUniform(zz) {
               src="src/assets/images/load.gif"
               style={{ width: "200px", marginTop: "25%" }}
             />
-          </div>
-          <div
+          </div> */}
+          {/* <div
             className="beforeLoad"
             style={{ width: "200px", margin: "0 auto" }}
           >
             <img src="src/assets/images/load.gif" style={{ width: "200px" }} />
-          </div>
-          <div className="afterLoad" id="fs" style={{ display: "none" }}>
-            <CustomisableUniformSlices />
-          </div>
+          </div> */}
+          {/* <div className="afterLoad" id="fs" style={{ display: "none" }}>
+            
+          </div> */}
+          <CustomisableUniformSlices />
         </div>
       </div>
     </>
